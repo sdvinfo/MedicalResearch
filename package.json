@@ -13,6 +13,9 @@
   },
   "main": "background.js",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
     "core-js": "^3.4.4",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
@@ -38,6 +41,7 @@
     "stylus-loader": "^3.0.2",
     "typescript": "~3.5.3",
     "vue-cli-plugin-electron-builder": "^1.4.4",
+    "vue-cli-plugin-fontawesome": "^0.2.0",
     "vue-cli-plugin-tailwind": "^1.1.0",
     "vue-template-compiler": "^2.6.10"
   }
