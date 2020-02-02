@@ -3,3 +3,119 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+  background-color: #202225;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+#app {
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Assign grid instructions to our parent grid container */
+.main-grid-container {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 40px 1fr 30px;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'footer footer';
+  height: 100%;
+  position: relative;
+  color: #ffffff;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  overflow-y: auto;
+  position: fixed;
+  top: 40px;
+  width: 230px;
+  height: calc(100vh - 70px);
+  padding: 0 0.6rem 0 0.6rem;
+  border-right: 1px solid #777;
+  background-color: #333842;
+  transition: all 0.6s ease-in-out;
+  /* transform: translateX(-245px); */
+  /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); */
+}
+
+/* Give every child element its grid name */
+header {
+  grid-area: header;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-items: start;
+  width: 100%;
+  height: 40px;
+  background-color: #333842;
+  border-bottom: 1px solid #777;
+  color: #ffffff;
+}
+
+main {
+  grid-area: main;
+  padding: 0 0.6rem 0 0.6rem;
+  height: calc(100vh - 70px);
+  background-color: #282c34;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #333842;
+  border-top: 1px solid #777;
+}
+
+.router-view-grid-container {
+  height: 100%;
+  max-height: calc(100vh - 70px);
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+
+.btn-sm {
+  @apply font-bold py-1 px-2 rounded;
+}
+
+.inline-btn {
+  @apply text-center font-bold px-2 shadow-inner;
+}
+
+.btn-gray {
+  @apply bg-gray-400 text-black;
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
