@@ -424,10 +424,32 @@ export default class Pacient {
 
   info: HumanInfo
   anamnesis: Anamnesis
+  examination: Examination
+  laboratoryMethods: LaboratoryMethods
+  drugTherapy: DrugTherapy
+  ecg: ECG
+  dailyEcgMonitoring: DailyEcgMonitoring
+  echocardiography: Echocardiography
+  deformationAtRest: DeformationAtRest
+  dynamometerRecovery: DynamometerRecovery
+  valsalvaRestoration: ValsalvaRestoration
+  bendopneaRecovery: BendopneaRecovery
+  endPoints: EndPoints
 
   constructor(options: any) {
     this.info = options.info
     this.anamnesis = options.anamnesis
+    this.examination = options.examination
+    this.laboratoryMethods = options.laboratoryMethods
+    this.drugTherapy = options.drugTherapy
+    this.ecg = options.ecg
+    this.dailyEcgMonitoring = options.dailyEcgMonitoring
+    this.echocardiography = options.echocardiography
+    this.deformationAtRest = options.deformationAtRest
+    this.dynamometerRecovery = options.dynamometerRecovery
+    this.valsalvaRestoration = options.valsalvaRestoration
+    this.bendopneaRecovery = options.bendopneaRecovery
+    this.endPoints = options.endPoints
   }
 
   toString() {

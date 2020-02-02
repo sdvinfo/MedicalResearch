@@ -33,10 +33,10 @@ export default class PacientsListPage extends Vue {
     //   console.log('this.pacientList count :', docs)
     // })
 
-    let pacient = new Pacient({ fio: 'Jhon Doe' })
-    this.db.insert(pacient, (err, res) => {
-      console.log('result :', res)
-    })
+    // let pacient = new Pacient({ fio: 'Jhon Doe' })
+    // this.db.insert(pacient, (err, res) => {
+    //   console.log('result :', res)
+    // })
 
     this.db.count({}, (err, res) => {
       if (err) console.error('Error: ', err)
